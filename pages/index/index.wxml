@@ -1,0 +1,33 @@
+<view class="index">
+  <SearchInput></SearchInput>
+  <swiper class="banner" autoplay interval="3000" circular indicator-dots indicator-active-color="#eb4450"
+    indicator-color="rgba(255, 255, 255, .4)">
+    <swiper-item wx:for="{{bannerList}}" wx:key="goods_id">
+      <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+        <image src="{{item.image_src}}" class="banner-img"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <view class="cat-items">
+    <navigator wx:for="{{catItemsList}}" wx:key="image_src" url="{{item.navigator_url}}" open-type="navigate">
+      <image src="{{item.image_src}}" />
+    </navigator>
+  </view>
+  <!-- 推荐框 -->
+  <view class="floor-list" wx:for="{{floorList}}" wx:key="index" wx:for-item="value">
+    <view class="floor-title">
+      <image src="{{value.floor_title.image_src}}" />
+    </view>
+    <view class="product_list">
+      <navigator class="l-img" url="{{value.product_list[0].navigator_url}}">
+        <image src="{{value.product_list[0].image_src}}" />
+      </navigator>
+      <view class="r-img">
+        <navigator wx:for="{{value.product_list_min_img}}" wx:for-item="item2" wx:for-index="index2" wx:key="name"
+          url="{{item2.navigator_url}}">
+          <image src="{{item2.image_src}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

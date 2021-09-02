@@ -1,0 +1,57 @@
+.tab-bar .tab-bar-title-wrapper{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.tab-bar-item {
+  width: 33.33%;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.tab-bar-title-wrapper .active {
+  color: #eb4450;
+  border-bottom: 10rpx solid #eb4450;
+}
+
+.tab-bar-content {
+  padding-top: 20rpx;
+}
+
+.tab-bar-content .no-data {
+  text-align: center;
+  color: #adadad;
+  padding-top: 40rpx;
+}
+
+.tab-bar-content .goods-item{
+  display: flex;
+}
+
+.l-item {
+  flex: 3;
+}
+
+.l-item image {
+  width:100%;
+  padding: 0 30rpx;
+}
+
+.r-item {
+  flex: 5;
+  position: relative;
+}
+
+.r-item .title {
+  position: absolute;
+  top: 20rpx;
+  font-size: 26rpx;
+  color: #adadad;
+}
+
+.r-item .price {
+  position: absolute;
+  bottom: 50rpx;
+
+}

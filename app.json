@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/category/category",
+    "pages/profile/profile",
+    "pages/pay/pay",
+    "pages/auth/auth",
+    "pages/cart/cart",
+    "pages/collect/collect",
+    "pages/search/search",
+    "pages/goodsDetail/goodsDetail",
+    "pages/goodsList/goodsList",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "臻尚首页",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#3e3e3e",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-o.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "images/category.png",
+        "selectedIconPath": "images/category-o.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart-o.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-o.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

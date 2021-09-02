@@ -1,0 +1,77 @@
+<view class="cart">
+  <view class="add-address" wx:if="{{isAddAddress}}" bindtap="addAddress">
+    添加收货地址
+  </view>
+  <view class="address" wx:else>
+    <text class="address-txt">配送至{{address.all}}</text>
+    <text class="tel-num">{{address.telNumber}}</text>
+  </view>
+  <view class="operate-info">
+    <view class="info-item">
+      <text class="icon iconfont icon-zhengpin"></text>
+      <text>100%正品</text>
+    </view>
+    <view class="info-item">
+      <text class="icon iconfont icon-zhekou"></text>
+      <text>天天有3折</text>
+    </view>
+    <view class="info-item">
+      <text class="icon iconfont icon-tuihuo"></text>
+      <text>退货无忧</text>
+    </view>
+  </view>
+  <view class="cart-content">
+    <view class="no-data" wx:if="{{goodsList.length === 0}}">
+      <image mode="widthFix" class="no-data-img" src="https://h2.vipstatic.com/ms2-m.vipstatic.com/static_v2/img/placeholder_shoppingcart_empty@2x.b36060a.png"></image>
+      <view class="txt">购物车空空如也，快去挑选中意好货吧~</view>
+      <view class="buy-collect">
+        <navigator url="/pages/category/category" class="buy" open-type="switchTab">马上抢购</navigator>
+        <navigator url="/pages/collect/collect" class="collect">查看收藏好货</navigator>
+      </view>
+    </view>
+    <view class="goods-list" wx:else>
+      <view 
+      class="goods-item" 
+      wx:for="{{goodsList}}" 
+      wx:key="goods_id"
+      >
+        <checkbox-group bindchange="handleCheck" data-id="{{index}}">
+          <checkbox class="select" checked="{{item.checked}}"></checkbox>
+        </checkbox-group>
+        <view class="r-goods-item">
+          <navigator url="/pages/goodsDetail/goodsDetail?id={{item.goods_id}}" class="goods-item-img-wrapper">
+            <image class="goods-item-img" mode="widthFix" src="{{item.goods_small_logo}}"></image>
+          </navigator>
+          <view class="goods-item-info">
+            <navigator url="/pages/goodsDetail/goodsDetail?id={{item.goods_id}}">
+              <view class="info-title">{{item.goods_name}}</view>
+            </navigator>
+            <view class="info-price-num">
+              <view class="info-price">￥{{item.goods_price}}</view>
+              <view class="info-num">
+                <text class="num-down" bindtap="handleCount" id="down" data-index="{{index}}">-</text>
+                <text class="num">{{item.num}}</text>
+                <text class="num-up" bindtap="handleCount" id="up" data-index="{{index}}">+</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 结算 -->
+  <view class="total-tools">
+    <view class="all-select">
+      <checkbox-group bindtap="handleAllSelect">
+        <checkbox checked="{{allSelect}}"></checkbox>
+      </checkbox-group>
+      <text>全选</text>
+    </view>
+    <view class="total-price">
+      总计<text class="price">￥{{totalPrice}}</text>
+      <!-- <text class="price-txt">(包含运费)</text> -->
+    </view>
+    <view class="operate" bindtap="handlePay">结算</view>
+
+  </view>
+</view>

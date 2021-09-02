@@ -1,0 +1,34 @@
+<view class="pay">
+  <view class="address">
+    <view class="address-txt">配送至{{address.all}}</view>
+    <view class="person-tel">
+      <view class="person">{{address.userName}}</view>
+      <view class="tel">{{address.telNumber}}</view>
+    </view>
+  </view>
+
+  <view class="pay-content">
+    <view class="goods-item" wx:for="{{payGoodsList}}" wx:key="goods_id">
+      <image class="item-img" src="{{item.goods_small_logo}}" mode="widthFix"></image>
+      <view class="r-pay-content">
+        <view class="title">{{item.goods_name}}</view>
+        <view class="price-num">
+          <view class="price">￥{{item.goods_price}}</view>
+          <view class="num">X{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="pay-bottom">
+    <view class="total-price">
+      合计: <text class="price">￥{{totalPrice}}</text>
+      <text class="txt">(包含运费)</text>
+    </view>
+    <view class="is-pay" bindtap="handlePay">支付</view>
+  </view>
+  
+  <view class="pay-img" wx:if="{{isPay}}" bindtap="handleModal">
+      <image src="../../images/pay.png" mode="widthFix"></image>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+.collect {
+  padding-top: 20rpx;
+}
+
+.collect .no-data {
+  text-align: center;
+  color: #adadad;
+  padding-top: 40rpx;
+}
+
+.collect .goods-item{
+  display: flex;
+}
+
+.l-item {
+  flex: 3;
+}
+
+.l-item image {
+  width:100%;
+  padding: 0 30rpx;
+}
+
+.r-item {
+  flex: 5;
+  position: relative;
+}
+
+.r-item .title {
+  position: absolute;
+  top: 20rpx;
+  font-size: 26rpx;
+  color: #adadad;
+}
+
+.r-item .price {
+  position: absolute;
+  bottom: 50rpx;
+
+}

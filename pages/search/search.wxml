@@ -1,0 +1,12 @@
+<view class="search">
+  <input type="text" value="{{queryValue}}" bindinput="handleSearch" >
+    <text></text>
+  </input>
+  <view class="search-list">
+    <navigator 
+    url="/pages/goodsDetail/goodsDetail?id={{item.goods_id}}"
+    class="search-list-item" 
+    wx:for="{{searchList}}" 
+    wx:key="goods_id">{{item.goods_name}}</navigator>
+  </view>
+</view>

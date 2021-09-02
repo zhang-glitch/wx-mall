@@ -1,0 +1,53 @@
+
+.category .content {
+  height: calc( 100vh - 90rpx );
+  display: flex;
+}
+
+.category .l-content {
+  flex: 2;
+}
+
+.category-item {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.category .r-content {
+  flex: 5;
+}
+
+.category .active {
+  color: #eb4450;
+}
+
+.category .r-content .category-item-content .title{
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-item-content .category-item-img-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-item-content .category-item-img-wrapper navigator {
+  width: 33.33%;
+  text-align: center;
+}
+.category-item-img-wrapper navigator image {
+  padding: 20rpx 10rpx;
+  width: 100%;
+  /* 注意这里一定要给图片加上高度。不然下面的文字不在一条线上。 */
+  height: 88px;
+}
+
+.goods-name {
+  font-size: 24rpx;
+  color: #c2c0c0;
+}

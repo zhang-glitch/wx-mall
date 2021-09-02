@@ -1,0 +1,124 @@
+.pay {
+  padding: 0 20rpx;
+}
+
+.pay .address {
+  color: #9c9a9a;
+  font-size: 26rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+
+.address .person-tel {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.person-tel .person {
+  margin-right: 10rpx;
+}
+
+.pay .pay-content {
+  margin-bottom: 90rpx;
+}
+
+.pay-content .goods-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 3rpx solid #eb4450;
+}
+
+.goods-item .item-img {
+  flex: 2;
+}
+
+.goods-item .r-pay-content {
+  padding-left: 10rpx;
+  flex: 5;
+}
+
+.r-pay-content .title {
+  font-size: 26rpx;
+  color: #9c9a9a;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.r-pay-content .price-num {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20rpx;
+}
+
+.price-num .price {
+  color: #eb4450;
+}
+
+.pay-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+}
+
+.pay-bottom .total-price {
+  flex: 6;
+}
+
+.total-price .price {
+  color: #eb4450;
+  font-size: 40rpx;
+}
+
+.total-price .txt {
+  color: #9c9a9a;
+  padding-left: 10rpx;
+}
+
+.pay-bottom .is-pay {
+  height: 100%;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eb4450;
+  color: #ffffff;
+  border-radius: 40rpx;
+}
+
+
+.pay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.pay .pay-img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .3);
+}
+
+
+.pay-img image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center;
+}

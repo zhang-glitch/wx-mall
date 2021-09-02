@@ -1,0 +1,4 @@
+<view class="goods-list">
+  <SearchInput></SearchInput>
+  <TabBar tabBarList="{{tabBarList}}" tabBarData="{{tabBarData}}" bindchangeIndex="changeIndex"></TabBar>
+</view>

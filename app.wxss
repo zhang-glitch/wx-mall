@@ -1,0 +1,13 @@
+@import './iconfont/icon.wxss';
+
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

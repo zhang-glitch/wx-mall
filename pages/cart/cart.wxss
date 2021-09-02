@@ -1,0 +1,193 @@
+.cart {
+  padding: 0 20rpx;
+}
+.cart .add-address{
+  text-align: center;
+  padding: 20rpx;
+  color: #9c9a9a;
+}
+
+.cart .address {
+  color: #9c9a9a;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.cart .operate-info {
+  display: flex;
+  align-items: center;
+}
+
+.operate-info .info-item {
+  flex: 1;
+  padding: 20rpx 0;
+  text-align: center;
+}
+
+.info-item .icon {
+  color: #eb4450;
+  padding-right: 10rpx;
+}
+
+.cart-content .no-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-data .no-data-img {
+  width: 60%;
+}
+
+.no-data .txt {
+  color: #a19c9c;
+}
+
+.buy-collect {
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.buy-collect .buy {
+  margin-right: 20rpx;
+  width: 280rpx;
+  border-radius: 40rpx;
+  padding: 10rpx 0;
+  border: 5rpx solid #eb4450;
+  color: #eb4450;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.buy-collect .collect {
+  margin-left: 20rpx;
+  width: 280rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  padding: 10rpx 0;
+  border: 5rpx solid #eb4450;
+  color: #eb4450;
+  font-size: 24rpx;
+}
+
+.cart-content {
+}
+
+.cart-content .goods-list {
+
+  height: calc( 100vh - 180rpx );
+}
+
+.goods-list .goods-item {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+  border-bottom: 5rpx solid #eee;
+}
+
+.select {
+  flex: 1;
+}
+
+.r-goods-item {
+  flex: 7;
+  display: flex;
+  align-items: center;
+}
+
+.r-goods-item .goods-item-img-wrapper {
+  width: 30%;
+}
+.goods-item-img {
+  width: 100%;
+  padding: 20rpx 0;
+  padding-right: 10rpx;
+}
+
+.goods-item-info {
+  flex: 1;
+}
+
+.goods-item-info .info-title {
+  font-size: 26rpx;
+  color: #9c9a9a;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goods-item-info .info-price-num {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20rpx;
+}
+
+.info-price-num .info-price {
+  color: #eb4450;
+}
+
+.info-num {
+  border: 5rpx solid #eb4450;
+  border-radius: 20rpx;
+  
+  padding: 10rpx 0;
+}
+
+.info-num .num-down {
+  padding: 0 30rpx;
+}
+
+.info-num .num {
+  color: #eb4450;
+}
+.info-num .num-up {
+  padding: 0 30rpx;
+}
+
+.total-tools {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+
+.total-tools .all-select {
+  flex: 2;
+  padding-left: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.total-tools .total-price {
+  flex: 4;
+}
+
+.total-price .price {
+  color: #eb4450;
+  padding-right: 6rpx;
+  font-size: 38rpx;
+}
+
+.total-price .price-txt {
+  color: #9c9a9a;
+}
+
+.total-tools .operate {
+  flex: 2;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #eb4450;
+  color: #ffffff;
+}

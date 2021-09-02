@@ -1,0 +1,31 @@
+<view class="category">
+  <SearchInput></SearchInput>
+  <view class="content">
+    <scroll-view class="l-content" scroll-y>
+      <view class="category-item {{currentIndex === index ? 'active' : ''}}" wx:for="{{categoryList}}" wx:key="cat_id" 
+      bindtap="handleClick" data-index="{{index}}" 
+      >{{item.cat_name}}</view>
+    </scroll-view>
+    <scroll-view class="r-content" scroll-y scroll-top="{{scrollTop}}">
+      <view 
+        class="category-item-content"
+        wx:for="{{categoryList[currentIndex].children}}"
+        wx:key="cat_id"
+        >
+        <view class="title">{{item.cat_name}}</view>
+        <view class="category-item-img-wrapper">
+          <navigator 
+          wx:for="{{item.children}}"
+          wx:for-index="index2"
+          wx:for-item="item2"
+          wx:key="cat_id"
+          url="/pages/goodsList/goodsList?cid={{item2.cat_id}}"
+          >
+            <image src="{{item2.cat_icon}}" ></image>
+            <view class="goods-name">{{item2.cat_name}}</view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

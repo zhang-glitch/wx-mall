@@ -1,0 +1,25 @@
+<view class="tab-bar">
+  <view class="tab-bar-title-wrapper">
+    <view 
+      class="tab-bar-item {{currentIndex === index ? 'active' : ''}}" 
+      wx:for="{{tabBarList}}" 
+      wx:key="*this"
+      bindtap="handleClick"
+      data-index="{{index}}"
+      >
+    {{item}}
+  </view>
+  </view>
+  <view class="tab-bar-content">
+    <view class="no-data" wx:if="{{tabBarData.length === 0}}">暂无数据</view>
+    <navigator  class="goods-item" wx:for="{{tabBarData}}" wx:key="goods_id" url="/pages/goodsDetail/goodsDetail?id={{item.goods_id}}">
+      <view class="l-item">
+        <image mode="widthFix"  src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"></image>
+      </view>
+      <view class="r-item">
+        <view class="title">{{item.goods_name}}</view>
+        <view class="price">￥{{item.goods_price}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+.search input {
+  border: 1px solid #eb4450;
+  margin: 20rpx 40rpx;
+  border-radius: 30rpx;
+  height: 60rpx;
+  position: relative;
+}
+
+.search input text {
+  position: absolute;
+  left: 20rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search .search-list {
+  padding: 0 20rpx;
+}
+
+.search-list .search-list-item {
+  background-color: #fff;
+  font-size: 26rpx;
+  padding: 15rpx 10rpx;
+  border-bottom: 1rpx solid #ccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
